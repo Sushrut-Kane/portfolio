@@ -7,7 +7,7 @@ html {
 body {
   font-weight: bold;
   margin: 0;
-  font-size: 18px; /* Increased font size */
+  font-size: 18px;
   font-family: "Poppins";
 }
 
@@ -22,23 +22,23 @@ ul {
   padding: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Ensure space between items */
+  justify-content: space-between;
 }
 
 .nav-name {
   color: white;
-  font-size: 2.5em; /* Increased font size */
+  font-size: 2.5em;
   margin-left: 1em;
 }
 
 .nav-section {
-  font-size: 1.2em; /* Increased font size */
+  font-size: 1.2em;
   display: flex;
   align-items: center;
 }
 
 button {
-  font-size: 16px; /* Increased font size */
+  font-size: 16px;
   color: #e1e1e1;
   font-family: inherit;
   font-weight: 800;
@@ -51,7 +51,7 @@ button {
   transition-duration: 400ms;
   transition-property: color;
   padding: 10px 20px;
-  margin: 0 10px; /* Increased margin for more space */
+  margin: 0 10px;
 }
 
 button:focus,
@@ -96,22 +96,22 @@ header {
 
 .info {
   background-color: rgba(22, 22, 23, 0.7);
-  padding: 40px; /* Increased padding for more space */
+  padding: 40px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
-  width: 60%; /* Increased width for more space */
+  width: 60%;
   display: inline-block;
 }
 
 .intro-para {
-  font-size: 18px; /* Increased font size */
+  font-size: 18px;
   text-align: justify;
 }
 
 .yellow {
   color: #ffc55d;
-  text-decoration: underline wavy; /* Added wavy underline */
+  text-decoration: underline wavy;
 }
 
 .nav-yellow {
@@ -119,7 +119,7 @@ header {
 }
 
 .resume {
-  font-size: 20px; /* Increased font size */
+  font-size: 20px;
   color: #ffc55d;
 }
 
@@ -132,4 +132,18 @@ header {
 
 .resume a:hover {
   border-bottom-width: 2px;
+}
+.info {
+  background-color: rgba(22, 22, 23, 0.7);
+  padding: 40px; /* Increased padding for more space */
+  border-radius: 10px;
+  box-shadow: 0 0 0 rgba(255, 255, 0, 0); /* No shadow initially */
+  margin: 0 auto;
+  width: 60%; /* Increased width for more space */
+  display: inline-block;
+  transition: box-shadow 0.3s ease-in-out; /* Smooth shadow transition */
+}
+
+.info:hover {
+  box-shadow: 0 0 15px 5px rgba(255, 255, 0, 0.4); /* Uniform yellow shadow on hover */
 }

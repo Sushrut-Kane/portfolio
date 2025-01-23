@@ -13,18 +13,18 @@
 </head>
 
 <body>
+  <!-- Navigation Bar -->
   <nav>
-    <ul>
-      <div class="nav-name">
-        <span class="yellow">SUSHRUT</span> KANE
-      </div>
-      <div class="nav-section">
-        <button class="skills-button" onclick="scrollToSection('skills')">Skills</button>
-        <button class="skills-button" onclick="scrollToSection('languages')">Languages</button>
-      </div>
-    </ul>
+    <div class="nav-name">
+      <span class="yellow">SUSHRUT</span> KANE
+    </div>
+    <div class="nav-section">
+      <button class="skills-button" onclick="scrollToSection('skills')">Skills</button>
+      <button class="skills-button" onclick="scrollToSection('languages')">Languages</button>
+    </div>
   </nav>
 
+  <!-- Skills Section -->
   <div class="container" id="skills">
     <div class="skills-title">My Skills</div>
     <hr />
@@ -39,11 +39,12 @@
       </div>
       <div class="skill-box">
         <h3>AI & Machine Learning</h3>
-        <p>Experience with TensorFlow, basic ML algorithms.</p>
+        <p>Experience with TensorFlow and basic ML algorithms.</p>
       </div>
     </div>
   </div>
 
+  <!-- Languages Section -->
   <div class="container" id="languages">
     <div class="languages-title">Languages</div>
     <hr />
@@ -69,6 +70,11 @@
         <p>Limited Working Proficiency</p>
       </div>
     </div>
+  </div>
+
+  <!-- Back to Homepage Button -->
+  <div class="home-button-container">
+    <a href="index.html" class="home-button">Back to Homepage</a>
   </div>
 
   <script>

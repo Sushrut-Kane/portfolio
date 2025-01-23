@@ -1,35 +1,27 @@
-// Navigation to About me page
+// Navigation to About Me page
 $(document).ready(function () {
-  const aboutButton = $(".about-button");
-
-  aboutButton.on("click", function () {
+  $(".about-button").on("click", function () {
     window.location.href = "about_me.html";
   });
 });
 
-// Navigation to About me page
+// Navigation to Contact page
 $(document).ready(function () {
-  const aboutButton = $(".contact-button");
-
-  aboutButton.on("click", function () {
+  $(".contact-button").on("click", function () {
     window.location.href = "contact.html";
   });
 });
 
-// Navigation to About me page
+// Navigation to Projects page
 $(document).ready(function () {
-  const aboutButton = $(".projects-button");
-
-  aboutButton.on("click", function () {
+  $(".projects-button").on("click", function () {
     window.location.href = "project.html";
   });
 });
 
-// Navigation to About me page
+// Navigation to Skills page
 $(document).ready(function () {
-  const aboutButton = $(".skills-button");
-
-  aboutButton.on("click", function () {
+  $(".skills-button").on("click", function () {
     window.location.href = "skills.html";
   });
 });
