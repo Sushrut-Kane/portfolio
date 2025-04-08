@@ -154,6 +154,7 @@ hr {
 
 .project-details {
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
