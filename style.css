@@ -150,14 +150,15 @@ header {
 /* magnet circle */
 /* Repelling Circle Container */
 #repel-container {
-  position: fixed; /* Important! */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  pointer-events: auto;
+  pointer-events: none; /* ✅ allow all clicks to pass through */
   z-index: 1;
 }
+
 
 /* Common circle styles */
 .circle {
@@ -166,8 +167,10 @@ header {
   border-radius: 50%;
   position: absolute;
   transition: all 0.1s ease-out;
-  touch-action: none; /* Needed for mobile drag */
+  touch-action: none;
+  pointer-events: auto; /* ✅ allow circle dragging */
 }
+
 
 /* Yellow draggable circle */
 #circle1 {
