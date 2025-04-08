@@ -147,3 +147,41 @@ header {
 .info:hover {
   box-shadow: 0 0 15px 5px rgba(255, 255, 0, 0.4); /* Uniform yellow shadow on hover */
 }
+/* magnet circle */
+/* Repelling Circle Container */
+#repel-container {
+  position: fixed; /* Important! */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+/* Common circle styles */
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  transition: all 0.1s ease-out;
+  touch-action: none; /* Needed for mobile drag */
+}
+
+/* Yellow draggable circle */
+#circle1 {
+  background-color: #ffc55d;
+  top: 100px;
+  left: 100px;
+  z-index: 2;
+  cursor: grab;
+}
+
+/* Red repelled circle */
+#circle2 {
+  background-color: #8c8c70;
+  top: 200px;
+  left: 300px;
+  z-index: 2;
+}
