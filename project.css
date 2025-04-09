@@ -184,3 +184,63 @@ hr {
   color: #e0ac3c;
 }
 
+
+/* ######################################## */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .nav-section {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+
+  .nav-section button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .container {
+    width: 90%;
+    margin-top: 100px;
+  }
+
+  .project-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .project-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .project-details {
+    width: 100%;
+    margin-top: 10px;
+    align-items: center;
+  }
+
+  .project-details h2,
+  .project-details p,
+  .project-link {
+    text-align: center;
+  }
+
+  .home-button-container {
+    margin-top: 40px;
+    padding: 0 10px;
+  }
+
+  .home-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
