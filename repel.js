@@ -9,12 +9,12 @@ function getClientPosition(e) {
   if (e.touches && e.touches.length > 0) {
     return {
       x: e.touches[0].clientX,
-      y: e.touches[0].clientY
+      y: e.touches[0].clientY,
     };
   } else {
     return {
       x: e.clientX,
-      y: e.clientY
+      y: e.clientY,
     };
   }
 }
@@ -43,6 +43,18 @@ function onMove(e) {
   // Bound within screen
   const maxX = window.innerWidth - circle1.offsetWidth;
   const maxY = window.innerHeight - circle1.offsetHeight;
+  // Fire trail effect
+  const fireTrail = document.getElementById("fire-trail");
+  const fire = document.createElement("div");
+  fire.className = "fire-particle";
+  fire.style.left = `${newX + 20}px`; // Adjust to center the trail
+  fire.style.top = `${newY + 20}px`;
+  fireTrail.appendChild(fire);
+
+  // Clean up after animation
+  setTimeout(() => {
+    fireTrail.removeChild(fire);
+  }, 600);
 
   newX = Math.max(0, Math.min(newX, maxX));
   newY = Math.max(0, Math.min(newY, maxY));
@@ -63,8 +75,11 @@ function onMove(e) {
     let repelX = circle2.offsetLeft + Math.cos(angle) * force;
     let repelY = circle2.offsetTop + Math.sin(angle) * force;
 
-    repelX = Math.max(0, Math.min(window.innerWidth - circle2.offsetWidth, repelX));
-    repelY = Math.max(0, Math.min(window.innerHeight - circle2.offsetHeight, repelY));
+    const padding = 30; // padding from the screen edge
+
+    repelX = Math.max(padding, Math.min(window.innerWidth - circle2.offsetWidth - padding, repelX));
+    repelY = Math.max(padding, Math.min(window.innerHeight - circle2.offsetHeight - padding, repelY));
+    
 
     circle2.style.left = `${repelX}px`;
     circle2.style.top = `${repelY}px`;
@@ -80,3 +95,19 @@ document.addEventListener("mouseup", stopDrag);
 circle1.addEventListener("touchstart", startDrag, { passive: false });
 document.addEventListener("touchmove", onMove, { passive: false });
 document.addEventListener("touchend", stopDrag);
+
+// 3d art
+
+document.addEventListener("mousemove", (e) => {
+  const centerX = window.innerWidth / 2;
+  const centerY = window.innerHeight / 2;
+  const percentX = (e.clientX - centerX) / centerX;
+  const percentY = (e.clientY - centerY) / centerY;
+
+  const rotateY = percentX * 15; // Max 15deg rotation left/right
+  const rotateX = -percentY * 15; // Max 15deg rotation up/down
+
+  // Apply to both circles
+  circle1.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  circle2.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+});

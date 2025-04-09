@@ -188,3 +188,106 @@ header {
   left: 300px;
   z-index: 2;
 }
+/* Make circle1 bigger and add grab cursor */
+#circle1 {
+  width: 70px;
+  height: 70px;
+  animation: pulse 1.5s infinite;
+  position: relative;
+  cursor: grab;
+}
+
+/* Pulse animation to attract attention */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(255, 197, 93, 0.5);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 197, 93, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(255, 197, 93, 0);
+  }
+}
+
+/* "Drag me!" text hint below circle1 */
+#circle1::after {
+  content: "Drag me!";
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #ffc55d;
+  font-family: Poppins, sans-serif;
+  white-space: nowrap;
+}
+
+/* Optional: Tooltip on hover */
+#circle1::before {
+  content: "Click and drag!";
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #000;
+  background: #ffc55d;
+  padding: 4px 8px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 10;
+}
+
+#circle1:hover::before {
+  opacity: 1;
+}
+/* fire trail */
+
+#fire-trail {
+  position: fixed;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.fire-particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffcc00, #ff0000);
+  opacity: 0.8;
+  animation: fadeOut 0.6s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0.5) translateY(-10px);
+  }
+}
+
+
+/* 3d style */
+
+/* Enable 3D space */
+#repel-container {
+  perspective: 1000px;
+  perspective-origin: center;
+  transform-style: preserve-3d;
+}
+
+/* 3D transformation on circles */
+.circle {
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease;
+  will-change: transform;
+}
+
+
+
