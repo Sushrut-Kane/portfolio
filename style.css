@@ -290,4 +290,65 @@ header {
 }
 
 
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-section {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    padding-left: 1em;
+  }
+
+  .nav-name {
+    font-size: 1.8em;
+    margin-left: 1em;
+  }
+
+  button {
+    margin: 8px 0;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  header {
+    padding: 60px 20px;
+    background-size: cover;
+  }
+
+  .info {
+    width: 90%;
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .intro-para {
+    font-size: 14px;
+  }
+
+  .resume {
+    font-size: 16px;
+  }
+
+  #circle1,
+  #circle2 {
+    width: 50px;
+    height: 50px;
+  }
+
+  #circle1::after {
+    font-size: 10px;
+    top: 60px;
+  }
+
+  #circle1::before {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+}
+
+
 
