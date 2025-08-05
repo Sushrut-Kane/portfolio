@@ -9,17 +9,17 @@ body {
 
 /* Navigation Bar */
 nav {
-  background-color: #161617;
-  color: #fff;
-  padding: 15px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1e1e1e;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  box-sizing: border-box; /* This line fixes the overflow issue */
 }
 
 .nav-name {
