@@ -1,34 +1,35 @@
-html {
+/* ---------------- Basic Reset ---------------- */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
   background-color: #161617;
   color: #a9a9a8;
-  font-family: "Poppins";
-}
-
-body {
-  font-weight: bold;
-  margin: 0;
   font-size: 18px;
-  font-family: "Poppins";
 }
 
+/* ---------------- Navigation ---------------- */
 nav {
   padding: 1em 0;
   background: rgba(22, 22, 23, 0.7);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
-
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 0 2em;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .nav-name {
   color: white;
   font-size: 2.5em;
-  margin-left: 1em;
+}
+.nav-yellow {
+  color: #ffc55d;
 }
 
 .nav-section {
@@ -36,61 +37,26 @@ ul {
   display: flex;
   align-items: center;
 }
-
 button {
   font-size: 16px;
   color: #e1e1e1;
-  font-family: inherit;
   font-weight: 800;
   cursor: pointer;
-  position: relative;
   border: none;
   background: none;
   text-transform: uppercase;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
-  transition-property: color;
   padding: 10px 20px;
   margin: 0 10px;
+  transition: color 0.4s;
 }
-
-button:focus,
-button:hover {
+button:hover, button:focus {
   color: #fcff36;
 }
 
-button:focus:after,
-button:hover:after {
-  width: 100%;
-  left: 0%;
-}
-
-button:after {
-  content: "";
-  pointer-events: none;
-  bottom: -2px;
-  left: 50%;
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background-color: #fff;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
-  transition-property: width, left;
-}
-
-button:hover {
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-}
-
-button:focus {
-  outline: none;
-}
-
+/* ---------------- Hero Section ---------------- */
 header {
-  background: url("path-to-your-image.jpg") no-repeat center center;
-  background-size: cover;
-  padding: 100px 0;
+  background: linear-gradient(135deg, #161617, #1a1a1a);
+  padding: 100px 20px;
   text-align: center;
 }
 
@@ -98,258 +64,264 @@ header {
   background-color: rgba(22, 22, 23, 0.7);
   padding: 40px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin: 0 auto;
   width: 60%;
-  display: inline-block;
+  margin: 0 auto;
 }
-
 .intro-para {
   font-size: 18px;
   text-align: justify;
 }
-
 .yellow {
   color: #ffc55d;
-  /*   */
 }
-
-.nav-yellow {
-  color: #ffc55d;
-}
-
-.resume {
-  font-size: 20px;
-  color: #ffc55d;
-}
-
 .resume a {
   color: #ffc55d;
   text-decoration: none;
   border-bottom: 1px solid #ffc55d;
   padding-bottom: 2px;
 }
-
 .resume a:hover {
   border-bottom-width: 2px;
 }
-.info {
-  background-color: rgba(22, 22, 23, 0.7);
-  padding: 40px; /* Increased padding for more space */
+
+/* ---------------- Skills Section ---------------- */
+#Skills {
+  padding: 80px 20px;
+  text-align: center;
+}
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+.skill-card {
+  background-color: rgba(22,22,23,0.7);
+  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 0 rgba(255, 255, 0, 0); /* No shadow initially */
-  margin: 0 auto;
-  width: 60%; /* Increased width for more space */
-  display: inline-block;
-  transition: box-shadow 0.3s ease-in-out; /* Smooth shadow transition */
+  width: 200px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
 }
-
-.info:hover {
-  box-shadow: 0 0 15px 5px rgba(255, 255, 0, 0.4); /* Uniform yellow shadow on hover */
+.skill-name {
+  font-weight: 700;
+  margin-bottom: 10px;
 }
-/* magnet circle */
-/* Repelling Circle Container */
-#repel-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none; /* ✅ allow all clicks to pass through */
-  z-index: 1;
-}
-
-
-/* Common circle styles */
-.circle {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  position: absolute;
-  transition: all 0.1s ease-out;
-  touch-action: none;
-  pointer-events: auto; /* ✅ allow circle dragging */
-}
-
-
-/* Yellow draggable circle */
-#circle1 {
-  background-color: #ffc55d;
-  top: 100px;
-  left: 100px;
-  z-index: 2;
-  cursor: grab;
-}
-
-/* Red repelled circle */
-#circle2 {
-  background-color: #8c8c70;
-  top: 200px;
-  left: 300px;
-  z-index: 2;
-}
-/* Make circle1 bigger and add grab cursor */
-#circle1 {
-  width: 70px;
-  height: 70px;
-  animation: pulse 1.5s infinite;
-  position: relative;
-  cursor: grab;
-}
-
-/* Pulse animation to attract attention */
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 rgba(255, 197, 93, 0.5);
-  }
-  70% {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(255, 197, 93, 0.6);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 rgba(255, 197, 93, 0);
-  }
-}
-
-/* "Drag me!" text hint below circle1 */
-#circle1::after {
-  content: "Drag me!";
-  position: absolute;
-  top: 80px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 12px;
-  color: #ffc55d;
-  font-family: Poppins, sans-serif;
-  white-space: nowrap;
-}
-
-/* Optional: Tooltip on hover */
-#circle1::before {
-  content: "Click and drag!";
-  position: absolute;
-  bottom: 110%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 12px;
-  color: #000;
-  background: #ffc55d;
-  padding: 4px 8px;
+.progress {
+  background: #333;
+  height: 10px;
   border-radius: 5px;
-  white-space: nowrap;
-  opacity: 0;
-  transition: opacity 0.3s;
-  z-index: 10;
+}
+.bar {
+  height: 10px;
+  width: 0%; /* will animate with GSAP */
+  background: #ffc55d;
+  border-radius: 5px;
 }
 
-#circle1:hover::before {
-  opacity: 1;
+/* ---------------- Projects Section ---------------- */
+/* Projects Section */
+#projects {
+  padding: 80px 20px;
+  text-align: center;
 }
-/* fire trail */
-
-#fire-trail {
-  position: fixed;
-  pointer-events: none;
-  z-index: 1;
+#projects h2 {
+  margin-bottom: 40px;
+  color: #ffc55d;
+}
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.project-card {
+  background-color: rgba(22,22,23,0.7);
+  border-radius: 12px;
+  width: 260px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255, 197, 93, 0.4);
+}
+.project-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+.project-content {
+  padding: 20px;
+}
+.project-content h3 {
+  margin: 0 0 10px 0;
+  color: #ffc55d;
+}
+.project-content p {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #e1e1e1;
+}
+.project-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 15px;
+  background-color: #ffc55d;
+  color: #161617;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 20px;
+  transition: background 0.3s;
+}
+.project-button:hover {
+  background-color: #ffd966;
 }
 
-.fire-particle {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #ffcc00, #ff0000);
-  opacity: 0.8;
-  animation: fadeOut 0.6s forwards;
-}
-
-@keyframes fadeOut {
-  to {
-    opacity: 0;
-    transform: scale(0.5) translateY(-10px);
+/* Responsive */
+@media screen and (max-width:768px) {
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
-
-/* 3d style */
-
-/* Enable 3D space */
-#repel-container {
-  perspective: 1000px;
-  perspective-origin: center;
-  transform-style: preserve-3d;
+/* ---------------- Contact Section ---------------- */
+#contact {
+  padding: 80px 20px;
+  text-align: center;
+}
+#contact form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#contact input, #contact textarea {
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+#contact button {
+  background-color: #ffc55d;
+  color: #161617;
+  font-weight: 700;
+  border-radius: 25px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#contact button:hover {
+  background-color: #ffd966;
 }
 
-/* 3D transformation on circles */
-.circle {
-  transform-style: preserve-3d;
-  transition: transform 0.2s ease;
-  will-change: transform;
-}
-
-
+/* ---------------- Responsive ---------------- */
 @media screen and (max-width: 768px) {
+  .info {
+    width: 90%;
+    padding: 20px;
+  }
+  .intro-para {
+    font-size: 16px;
+  }
+  .resume a {
+    font-size: 16px;
+  }
   nav ul {
     flex-direction: column;
-    align-items: center; /* center content for better appearance */
+    align-items: center;
+    padding: 0 1em;
   }
-
   .nav-name {
     font-size: 1.8em;
     margin-bottom: 0.5em;
   }
-
   .nav-section {
-    flex-direction: row; /* Keep buttons in a row */
-    flex-wrap: wrap;     /* Wrap to new line if needed */
+    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    width: 100%;
-    padding: 0 1em;
   }
-
   button {
     font-size: 14px;
     padding: 8px 12px;
     margin: 5px 0;
   }
+  .skills-grid, .projects-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.about-section {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
 
-  header {
-    padding: 60px 20px;
-    background-size: cover;
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 15px 0;
+}
+
+.about-section .highlight {
+  font-weight: bold;
+  color: #00b894; /* nice green accent */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Make nav links stack nicely */
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .info {
-    width: 90%;
+  /* About section - stack vertically */
+  .about {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .about-text {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  /* Project cards */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card img {
+    height: auto;
+    max-height: 200px;
+  }
+
+  /* Contact section */
+  .contact {
+    text-align: center;
     padding: 20px;
-    font-size: 16px;
-  }
-
-  .intro-para {
-    font-size: 14px;
-  }
-
-  .resume {
-    font-size: 16px;
-  }
-
-  #circle1,
-  #circle2 {
-    width: 50px;
-    height: 50px;
-  }
-
-  #circle1::after {
-    font-size: 10px;
-    top: 60px;
-  }
-
-  #circle1::before {
-    font-size: 10px;
-    padding: 2px 6px;
   }
 }
 
+@media (max-width: 480px) {
+  h1, h2, h3 {
+    font-size: 1.2rem;
+  }
 
+  .hero {
+    padding: 40px 10px;
+  }
+
+  .project-card {
+    padding: 10px;
+  }
+
+  nav {
+    font-size: 0.9rem;
+  }
+}
