@@ -2,183 +2,439 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>Sushrut Kane</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sushrut Kane | Portfolio</title>
+  
+  <!-- Modern Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  
   <link href="style.css" rel="stylesheet" type="text/css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
 <body>
 
   <!-- Navigation -->
-  <nav>
-    <ul>
-      <div class="nav-name"><span class="nav-yellow">SUSHRUT </span>KANE</div>
-      <div class="nav-section">
-        <button onclick="scrollToSection('Skills')">Skills</button>
-        <button onclick="scrollToSection('projects')">Projects</button>
-        <button onclick="scrollToSection('contact')">Contact</button>
-        <button onclick="scrollToSection('about')">About Me</button>
-      </div>
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="text-accent">S</span>K
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </nav>
 
   <!-- Hero Section -->
-  <header>
-    <div class="info-image">
-      <div class="info">
-        <p class="intro-para">
-          I am a passionate
-          <span class="yellow">Computer Science and Engineering student</span>
-          from Jaipur, India, currently in my
-          <span class="yellow">third year</span> at Manipal University Jaipur (MUJ). My focus is on turning complex problems into elegant software solutions, and I have a keen interest in
-          <span class="yellow">Natural Language Processing, Full-Stack Development, and Deep Learning</span>. I am actively seeking opportunities to apply my skills to real-world challenges and contribute to innovative projects.
-        </p>
-        <p class="resume">
-          <a href="https://drive.google.com/file/d/1LAdF9yVdH7Bd3opZ8IN5lMvUbdnBN0Tb/view?usp=sharing" target="_blank">Check my Resume &#8594;</a>
-        </p>
+  <section id="hero" class="hero-section">
+    <div class="hero-content glass-panel">
+      <h1 class="hero-title">
+        Hi, I'm <span class="text-gradient">Sushrut Kane</span>
+      </h1>
+      <h2 class="hero-subtitle">Engineering the future with code & AI.</h2>
+      <p class="hero-description">
+        A passionate Computer Science student from Jaipur, India, specializing in
+        <strong class="text-accent">Full-Stack Development, Machine Learning, and NLP</strong>.
+        I transform complex problems into elegant, scaleable solutions.
+      </p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="https://drive.google.com/file/d/1LAdF9yVdH7Bd3opZ8IN5lMvUbdnBN0Tb/view?usp=sharing" target="_blank" class="btn btn-secondary">Download Resume</a>
       </div>
     </div>
-  </header>
+    
+    <!-- Background Animated Shapes -->
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="section-container">
+      <h2 class="section-heading">About <span class="text-accent">Me</span></h2>
+      <div class="about-grid">
+        <div class="about-text glass-card fade-up">
+          <p>
+            I thrive at the intersection of <strong class="text-gradient">innovation, practicality, and creativity</strong>. As a third-year student at Manipal University Jaipur (MUJ), my journey is driven by continuous learning and building intelligent systems.
+          </p>
+          <p>
+            Beyond the screen, I am a fierce competitor in <strong class="text-white">table tennis and hockey</strong>. The discipline, teamwork, and fast-paced nature of these sports directly influence my approach to software engineering—always staying active and adapting to new challenges.
+          </p>
+          <p>
+            I'm also an avid <strong class="text-white">traveler</strong>. Exploring new cultures and places gives me fresh perspectives that I bring back into my problem-solving process.
+          </p>
+        </div>
+        <div class="about-stats fade-up">
+          <div class="stat-box glass-card">
+            <h3 class="stat-number">3+</h3>
+            <p>Years of Coding</p>
+          </div>
+          <div class="stat-box glass-card">
+            <h3 class="stat-number">20+</h3>
+            <p>Projects Completed</p>
+          </div>
+          <div class="stat-box glass-card">
+            <h3 class="stat-number">∞</h3>
+            <p>Cups of Coffee</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Skills Section -->
-  <section id="Skills">
-    <h2>My Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-name">Python</div>
-        <div class="progress"><div class="bar" data-width="90%"></div></div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-name">JavaScript</div>
-        <div class="progress"><div class="bar" data-width="80%"></div></div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-name">HTML/CSS</div>
-        <div class="progress"><div class="bar" data-width="95%"></div></div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-name">Deep Learning</div>
-        <div class="progress"><div class="bar" data-width="75%"></div></div>
+  <section id="skills" class="section bg-alt">
+    <div class="section-container">
+      <h2 class="section-heading">My <span class="text-accent">Arsenal</span></h2>
+      
+      <div class="skills-container">
+        <!-- Technical Skills -->
+        <div class="skills-column fade-up">
+          <h3 class="column-title">Technical Proficiency</h3>
+          
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Machine Learning</span>
+              <span class="skill-percentage">95%</span>
+            </div>
+            <div class="progress-bg">
+              <div class="progress-bar" data-width="95%"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Python</span>
+              <span class="skill-percentage">90%</span>
+            </div>
+            <div class="progress-bg">
+              <div class="progress-bar" data-width="90%"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Fullstack Dev</span>
+              <span class="skill-percentage">85%</span>
+            </div>
+            <div class="progress-bg">
+              <div class="progress-bar" data-width="85%"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">JavaScript</span>
+              <span class="skill-percentage">80%</span>
+            </div>
+            <div class="progress-bg">
+              <div class="progress-bar" data-width="80%"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Algorithms</span>
+              <span class="skill-percentage">85%</span>
+            </div>
+            <div class="progress-bg">
+              <div class="progress-bar" data-width="85%"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Deep Learning</span>
+              <span class="skill-percentage">75%</span>
+            </div>
+            <div class="progress-bg">
+              <div class="progress-bar" data-width="75%"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Git & Version Control</span>
+              <span class="skill-percentage">90%</span>
+            </div>
+            <div class="progress-bg">
+              <div class="progress-bar" data-width="90%"></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Summary Cards -->
+        <div class="skills-cards-column fade-up">
+          <div class="glass-card skill-summary">
+            <h4>AI & Machine Learning</h4>
+            <p>TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, NLP models.</p>
+          </div>
+          <div class="glass-card skill-summary">
+            <h4>Web Development</h4>
+            <p>React, Node.js, Express.js, modern CSS/HTML, responsive design.</p>
+          </div>
+          <div class="glass-card skill-summary">
+            <h4>Languages</h4>
+            <p>Python, C, JavaScript, MATLAB. Fluent in English, Hindi, Marathi.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <!-- Project 1 -->
-      <div class="project-card">
-        <img src="skillforge-image.png" alt="SkillForge" />
-        <div class="project-content">
-          <h3>SkillForge</h3>
-          <p>Full-Stack Web App which understands the uploaded resume in PDFs and provide constructive feedback</p>
-          <a href="https://github.com/Sushrut-Kane/SkillForge" class="project-button" target="_blank">View Project</a>
+  <section id="projects" class="section">
+    <div class="section-container">
+      <h2 class="section-heading">Featured <span class="text-accent">Projects</span></h2>
+      
+      <div class="projects-list">
+        
+        <!-- Project 1 -->
+        <div class="project-row fade-up">
+          <div class="project-image-container">
+            <img src="skillforge-image.png" alt="SkillForge Theme" class="project-img" onerror="this.src='https://via.placeholder.com/600x400/1e1e24/00d2ff?text=SkillForge'">
+          </div>
+          <div class="project-info glass-card">
+            <div class="project-tags">
+              <span class="tag">AI</span>
+              <span class="tag">Fullstack</span>
+            </div>
+            <h3 class="project-title">SkillForge</h3>
+            <p class="project-desc">
+              A comprehensive Full-Stack Web App that intelligently parses uploaded PDF resumes to analyze skills and provide incredibly constructive, AI-driven feedback.
+            </p>
+            <a href="https://github.com/Sushrut-Kane/SkillForge" target="_blank" class="btn btn-primary btn-sm">View Source <span>&#8594;</span></a>
+          </div>
         </div>
-      </div>
 
-      <!-- Project 2 -->
-      <div class="project-card">
-        <img src="agri-image.png" alt="Agri-Advisor" />
-        <div class="project-content">
-          <h3>Agri-Advisor</h3>
-          <p>A Full Stack MERN project to help farmers to ask queries and ask any weather, location or market related issues.</p>
-          <a href="https://github.com/Sushrut-Kane/Agri" class="project-button" target="_blank">View Project</a>
+        <!-- Project 2 -->
+        <div class="project-row reverse fade-up">
+          <div class="project-image-container">
+            <img src="project_photo4.png" alt="Chat with PDF" class="project-img" onerror="this.src='https://via.placeholder.com/600x400/1e1e24/00d2ff?text=Chat+With+PDF'">
+          </div>
+          <div class="project-info glass-card">
+            <div class="project-tags">
+              <span class="tag">LLM</span>
+              <span class="tag">Streamlit</span>
+            </div>
+            <h3 class="project-title">Chat-with-PDF</h3>
+            <p class="project-desc">
+              A powerful, lightweight Large Language Model application built to help users seamlessly chat with, query, and summarize any uploaded PDF document using advanced retrieval-augmented generation.
+            </p>
+            <div class="project-links">
+              <a href="https://sushrut-kane-chatwithpdf-ufyy7lxmyfzrqngbwbrfwu.streamlit.app/" target="_blank" class="btn btn-primary btn-sm">Live Demo <span>&#8594;</span></a>
+              <a href="https://github.com/Sushrut-Kane/Sushrut-Kane-Chat_with_PDF" target="_blank" class="btn btn-secondary btn-sm">GitHub</a>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <!-- Project 3 -->
-      <div class="project-card">
-        <img src="project_photo4.png" alt="Chat-with-PDF" />
-        <div class="project-content">
-          <h3>Chat-with-PDF</h3>
-          <p>A small scale LLM project to help user understand any pdf.</p>
-          <a href="https://github.com/Sushrut-Kane/Sushrut-Kane-Chat_with_PDF" class="project-button" target="_blank">View Project</a>
-
+        <!-- Project 3 -->
+        <div class="project-row fade-up">
+          <div class="project-image-container">
+            <img src="project_photo3.png" alt="ATS Resume Tracker" class="project-img" onerror="this.src='https://via.placeholder.com/600x400/1e1e24/00d2ff?text=ATS+Tracker'">
+          </div>
+          <div class="project-info glass-card">
+            <div class="project-tags">
+              <span class="tag">LLM</span>
+              <span class="tag">Prompt Engineering</span>
+            </div>
+            <h3 class="project-title">ATS Resume Tracker</h3>
+            <p class="project-desc">
+              An advanced Streamlit-based project that evaluates resumes against Applicant Tracking Systems standards, providing meaningful insights and demonstrating precise prompt engineering with LLMs.
+            </p>
+            <a href="https://atsresumetracker-d3khybmfx4pwrdpzc2645o.streamlit.app/" target="_blank" class="btn btn-primary btn-sm">Live Demo <span>&#8594;</span></a>
+          </div>
         </div>
+
+        <!-- Project 4 -->
+        <div class="project-row reverse fade-up">
+          <div class="project-image-container">
+            <img src="agri-image.png" alt="Agri-Advisor" class="project-img" onerror="this.src='https://via.placeholder.com/600x400/1e1e24/00d2ff?text=Agri-Advisor'">
+          </div>
+          <div class="project-info glass-card">
+            <div class="project-tags">
+              <span class="tag">MERN</span>
+              <span class="tag">Web App</span>
+            </div>
+            <h3 class="project-title">Agri-Advisor</h3>
+            <p class="project-desc">
+              A Full Stack MERN application designed to empower farmers by answering queries regarding weather, optimal locations, and real-time market issues.
+            </p>
+            <a href="https://github.com/Sushrut-Kane/Agri" target="_blank" class="btn btn-primary btn-sm">View Source <span>&#8594;</span></a>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-row fade-up">
+          <div class="project-image-container">
+            <img src="project_photo.png" alt="Recipe Finder" class="project-img" onerror="this.src='https://via.placeholder.com/600x400/1e1e24/00d2ff?text=Recipe+Finder'">
+          </div>
+          <div class="project-info glass-card">
+            <div class="project-tags">
+              <span class="tag">Frontend</span>
+              <span class="tag">API</span>
+            </div>
+            <h3 class="project-title">Recipe Finder</h3>
+            <p class="project-desc">
+              Discover delicious recipes based merely on the ingredients you currently have. A sleek, interactive frontend interface that makes deciding what to cook simple.
+            </p>
+            <a href="https://recipe-finder-eta-green.vercel.app/" target="_blank" class="btn btn-primary btn-sm">Live Demo <span>&#8594;</span></a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+  <section id="contact" class="section bg-alt">
+    <div class="section-container">
+      <h2 class="section-heading">Let's <span class="text-accent">Connect</span></h2>
+      <p class="contact-subtitle fade-up">Have a question or want to work together? Drop me a message.</p>
+      
+      <div class="contact-content fade-up">
+        <form class="contact-form glass-card">
+          <div class="form-group">
+            <input type="text" id="name" placeholder="Name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Email" required />
+          </div>
+          <div class="form-group">
+            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" onclick="event.preventDefault(); alert('Message feature coming soon!')">Send Message</button>
+        </form>
+      </div>
+    </div>
   </section>
 
-<!-- About Section -->
-<section id="about" class="section about-section">
-  <h2>About Me</h2>
-  <p>
-    Hi, I’m <span class="highlight">Sushrut Kane</span> — a passionate developer with a strong interest in 
-    <span class="highlight">AI</span>, <span class="highlight">machine learning</span>, and 
-    <span class="highlight">full-stack development</span>.  
-  </p>
-  <p>
-    I enjoy turning complex problems into simple, elegant solutions. Whether it’s building intelligent systems, 
-    working with modern web technologies, or exploring data-driven projects, I thrive on continuous learning.  
-  </p>
-  <p>
-    My goal is to create impactful projects that blend <span class="highlight">innovation</span>, 
-    <span class="highlight">practicality</span>, and <span class="highlight">creativity</span>.
-  </p>
-</section>
-
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="nav-brand">
+        <span class="text-accent">S</span>K
+      </div>
+      <p class="copyright">© 2026 Sushrut Kane. Designed & Built with passion.</p>
+    </div>
+  </footer>
 
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script>
-    // Smooth scroll function
-    function scrollToSection(sectionId) {
-      const section = document.getElementById(sectionId);
-      if (section) section.scrollIntoView({ behavior: 'smooth' });
-    }
+    document.addEventListener("DOMContentLoaded", () => {
+      // Register GSAP ScrollTrigger
+      gsap.registerPlugin(ScrollTrigger);
 
-    // Animate hero section
-    gsap.from(".intro-para", { duration: 1, y:50, opacity:0, ease:"power3.out" });
-    gsap.from(".resume", { duration: 1, delay:0.5, y:50, opacity:0, ease:"power3.out" });
-
-    // Animate skills bars when in view
-    gsap.registerPlugin(ScrollTrigger);
-    const skillBars = document.querySelectorAll(".bar");
-    skillBars.forEach(bar => {
-      gsap.fromTo(bar, { width: "0%" }, {
-        width: bar.getAttribute("data-width"),
-        duration: 1.5,
-        scrollTrigger: {
-          trigger: bar,
-          start: "top 80%",
-        }
+      // Mobile Menu Toggle
+      const hamburger = document.querySelector('.hamburger');
+      const navLinksList = document.querySelector('.nav-links');
+      
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinksList.classList.toggle('active');
       });
-    });
 
-    // Animate project cards on scroll
-    const projectCards = document.querySelectorAll(".project-card");
-    projectCards.forEach(card => {
-      gsap.from(card, {
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        scrollTrigger: {
-          trigger: card,
-          start: "top 85%",
-        }
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('.nav-link, .btn[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          
+          if (targetElement) {
+            // Close mobile menu if open
+            hamburger.classList.remove('active');
+            navLinksList.classList.remove('active');
+            
+            window.scrollTo({
+              top: targetElement.offsetTop - 70, // offset for fixed navbar
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // --- GSAP ANIMATIONS --- //
+      
+      // Navbar load
+      gsap.from(".navbar", { y: -100, opacity: 0, duration: 1, ease: "power3.out" });
+      
+      // Hero Elements load
+      const heroTl = gsap.timeline();
+      heroTl.from(".hero-title", { y: 50, opacity: 0, duration: 0.8, ease: "power3.out", delay: 0.2 })
+            .from(".hero-subtitle", { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6")
+            .from(".hero-description", { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6")
+            .from(".hero-buttons", { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6");
+      
+      // Background shape floating animation
+      gsap.to(".shape-1", {
+        y: "40px", x: "30px", rotation: 15, duration: 6, repeat: -1, yoyo: true, ease: "sine.inOut"
+      });
+      gsap.to(".shape-2", {
+        y: "-50px", x: "-40px", rotation: -15, duration: 7, repeat: -1, yoyo: true, ease: "sine.inOut", delay: 1
+      });
+      gsap.to(".shape-3", {
+        y: "30px", scale: 1.1, duration: 5, repeat: -1, yoyo: true, ease: "sine.inOut", delay: 2
+      });
+
+      // Fade up elements on scroll
+      const fadeElements = document.querySelectorAll('.fade-up');
+      fadeElements.forEach((el) => {
+        gsap.from(el, {
+          y: 60,
+          opacity: 0,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%", // Triggers when top of element hits 85% of viewport
+            toggleActions: "play none none reverse" // re-animates if scrolled back up
+          }
+        });
+      });
+
+      // Progress Bars Animation
+      const progressBars = document.querySelectorAll('.progress-bar');
+      progressBars.forEach((bar) => {
+        gsap.fromTo(bar, 
+          { width: "0%" }, 
+          {
+            width: bar.getAttribute('data-width'),
+            duration: 1.5,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: bar,
+              start: "top 90%",
+            }
+          }
+        );
+      });
+
+      // Parallax effect on project images
+      const projectImages = document.querySelectorAll('.project-img');
+      projectImages.forEach((img) => {
+        gsap.to(img, {
+          yPercent: 15,
+          ease: "none",
+          scrollTrigger: {
+            trigger: img.parentElement,
+            start: "top bottom", 
+            end: "bottom top",
+            scrub: true
+          }
+        });
       });
     });
   </script>
-
 </body>
 </html>
