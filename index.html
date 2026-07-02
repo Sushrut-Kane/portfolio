@@ -1,440 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sushrut Kane | Portfolio</title>
-  
-  <!-- Modern Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet" />
-  
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sushrut Kane — Developer & ML Engineer</title>
+    <meta name="description"
+        content="Sushrut Kane — third-year CS student building full-stack web apps and machine-learning tools. Selected work, capabilities, and contact." />
+    <meta name="author" content="Sushrut Kane" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sushrut Kane — Developer & ML Engineer" />
+    <meta property="og:description"
+        content="Full-stack development, machine learning & NLP. Selected work and experiments." />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2317140f'/%3E%3Ccircle cx='24' cy='9' r='3' fill='%23e4462a'/%3E%3Ctext x='4' y='24' font-family='Georgia,serif' font-size='18' fill='%23ece5d8'%3ESK%3C/text%3E%3C/svg%3E" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet" />
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-brand">
-      <span class="text-accent">S</span>K
-    </div>
-    <ul class="nav-links">
-      <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#skills" class="nav-link">Skills</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#contact" class="nav-link">Contact</a></li>
-    </ul>
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </nav>
+    <!-- Grain overlay -->
+    <div class="grain" aria-hidden="true"></div>
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero-section">
-    <div class="hero-content glass-panel">
-      <h1 class="hero-title">
-        Hi, I'm <span class="text-gradient">Sushrut Kane</span>
-      </h1>
-      <h2 class="hero-subtitle">Engineering the future with code & AI.</h2>
-      <p class="hero-description">
-        A passionate Computer Science student from Jaipur, India, specializing in
-        <strong class="text-accent">Full-Stack Development, Machine Learning, and NLP</strong>.
-        I transform complex problems into elegant, scaleable solutions.
-      </p>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary">View My Work</a>
-        <a href="https://drive.google.com/file/d/1LAdF9yVdH7Bd3opZ8IN5lMvUbdnBN0Tb/view?usp=sharing" target="_blank" class="btn btn-secondary">Download Resume</a>
-      </div>
-    </div>
-    
-    <!-- Background Animated Shapes -->
-    <div class="shape shape-1"></div>
-    <div class="shape shape-2"></div>
-    <div class="shape shape-3"></div>
-  </section>
+    <!-- Custom cursor -->
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-follow" aria-hidden="true"><span class="cursor-label"></span></div>
 
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="section-container">
-      <h2 class="section-heading">About <span class="text-accent">Me</span></h2>
-      <div class="about-grid">
-        <div class="about-text glass-card fade-up">
-          <p>
-            I thrive at the intersection of <strong class="text-gradient">innovation, practicality, and creativity</strong>. As a third-year student at Manipal University Jaipur (MUJ), my journey is driven by continuous learning and building intelligent systems.
-          </p>
-          <p>
-            Beyond the screen, I am a fierce competitor in <strong class="text-white">table tennis and hockey</strong>. The discipline, teamwork, and fast-paced nature of these sports directly influence my approach to software engineering—always staying active and adapting to new challenges.
-          </p>
-          <p>
-            I'm also an avid <strong class="text-white">traveler</strong>. Exploring new cultures and places gives me fresh perspectives that I bring back into my problem-solving process.
-          </p>
+    <!-- Scroll progress -->
+    <div class="progress" aria-hidden="true"></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+        <div class="preloader__count" id="count">00</div>
+        <div class="preloader__meta">
+            <p class="mono">Sushrut Kane</p>
+            <p class="mono">Developer / ML Engineer</p>
+            <p class="mono">Est. Jaipur, IN</p>
         </div>
-        <div class="about-stats fade-up">
-          <div class="stat-box glass-card">
-            <h3 class="stat-number">3+</h3>
-            <p>Years of Coding</p>
-          </div>
-          <div class="stat-box glass-card">
-            <h3 class="stat-number">20+</h3>
-            <p>Projects Completed</p>
-          </div>
-          <div class="stat-box glass-card">
-            <h3 class="stat-number">∞</h3>
-            <p>Cups of Coffee</p>
-          </div>
-        </div>
-      </div>
+        <div class="preloader__bar" id="preBar"></div>
     </div>
-  </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="section bg-alt">
-    <div class="section-container">
-      <h2 class="section-heading">My <span class="text-accent">Arsenal</span></h2>
-      
-      <div class="skills-container">
-        <!-- Technical Skills -->
-        <div class="skills-column fade-up">
-          <h3 class="column-title">Technical Proficiency</h3>
-          
-          <div class="skill-item">
-            <div class="skill-info">
-              <span class="skill-name">Machine Learning</span>
-              <span class="skill-percentage">95%</span>
-            </div>
-            <div class="progress-bg">
-              <div class="progress-bar" data-width="95%"></div>
-            </div>
-          </div>
+    <!-- Navigation -->
+    <header class="nav" id="nav">
+        <a href="#hero" class="nav__brand magnetic" data-cursor="home" aria-label="Sushrut Kane — home">
+            <span class="dot"></span> Sushrut<span class="accent">.</span>
+        </a>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="#about" class="nav__link"><span class="idx">01</span>About</a></li>
+                <li><a href="#experience" class="nav__link"><span class="idx">02</span>Experience</a></li>
+                <li><a href="#skills" class="nav__link"><span class="idx">03</span>Skills</a></li>
+                <li><a href="#work" class="nav__link"><span class="idx">04</span>Work</a></li>
+                <li><a href="#contact" class="nav__link"><span class="idx">05</span>Contact</a></li>
+            </ul>
+        </nav>
+        <button class="nav__burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span>
+        </button>
+    </header>
 
-          <div class="skill-item">
-            <div class="skill-info">
-              <span class="skill-name">Python</span>
-              <span class="skill-percentage">90%</span>
-            </div>
-            <div class="progress-bg">
-              <div class="progress-bar" data-width="90%"></div>
-            </div>
-          </div>
-
-          <div class="skill-item">
-            <div class="skill-info">
-              <span class="skill-name">Fullstack Dev</span>
-              <span class="skill-percentage">85%</span>
-            </div>
-            <div class="progress-bg">
-              <div class="progress-bar" data-width="85%"></div>
-            </div>
-          </div>
-
-          <div class="skill-item">
-            <div class="skill-info">
-              <span class="skill-name">JavaScript</span>
-              <span class="skill-percentage">80%</span>
-            </div>
-            <div class="progress-bg">
-              <div class="progress-bar" data-width="80%"></div>
-            </div>
-          </div>
-
-          <div class="skill-item">
-            <div class="skill-info">
-              <span class="skill-name">Algorithms</span>
-              <span class="skill-percentage">85%</span>
-            </div>
-            <div class="progress-bg">
-              <div class="progress-bar" data-width="85%"></div>
-            </div>
-          </div>
-
-          <div class="skill-item">
-            <div class="skill-info">
-              <span class="skill-name">Deep Learning</span>
-              <span class="skill-percentage">75%</span>
-            </div>
-            <div class="progress-bg">
-              <div class="progress-bar" data-width="75%"></div>
-            </div>
-          </div>
-
-          <div class="skill-item">
-            <div class="skill-info">
-              <span class="skill-name">Git & Version Control</span>
-              <span class="skill-percentage">90%</span>
-            </div>
-            <div class="progress-bg">
-              <div class="progress-bar" data-width="90%"></div>
-            </div>
-          </div>
+    <!-- Mobile menu -->
+    <div class="menu" id="menu">
+        <ul>
+            <li><a href="#about" class="menu-link"><span class="idx">01</span>About</a></li>
+            <li><a href="#experience" class="menu-link"><span class="idx">02</span>Experience</a></li>
+            <li><a href="#skills" class="menu-link"><span class="idx">03</span>Skills</a></li>
+            <li><a href="#work" class="menu-link"><span class="idx">04</span>Work</a></li>
+            <li><a href="#contact" class="menu-link"><span class="idx">05</span>Contact</a></li>
+        </ul>
+        <div class="menu__foot">
+            <a class="mono" href="https://github.com/Sushrut-Kane" target="_blank" rel="noopener">GitHub ↗</a>
+            <a class="mono" href="https://drive.google.com/file/d/1LAdF9yVdH7Bd3opZ8IN5lMvUbdnBN0Tb/view?usp=sharing"
+                target="_blank" rel="noopener">Résumé ↗</a>
         </div>
-        
-        <!-- Summary Cards -->
-        <div class="skills-cards-column fade-up">
-          <div class="glass-card skill-summary">
-            <h4>AI & Machine Learning</h4>
-            <p>TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, NLP models.</p>
-          </div>
-          <div class="glass-card skill-summary">
-            <h4>Web Development</h4>
-            <p>React, Node.js, Express.js, modern CSS/HTML, responsive design.</p>
-          </div>
-          <div class="glass-card skill-summary">
-            <h4>Languages</h4>
-            <p>Python, C, JavaScript, MATLAB. Fluent in English, Hindi, Marathi.</p>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <div class="section-container">
-      <h2 class="section-heading">Featured <span class="text-accent">Projects</span></h2>
-      
-      <div class="projects-list">
-        
-        <!-- Project 1 -->
-        <div class="project-row fade-up">
-          <div class="project-image-container">
-            <img src="skillforge-image.png" alt="SkillForge Theme" class="project-img" onerror="this.src='https://via.placeholder.com/600x400/1e1e24/00d2ff?text=SkillForge'">
-          </div>
-          <div class="project-info glass-card">
-            <div class="project-tags">
-              <span class="tag">AI</span>
-              <span class="tag">Fullstack</span>
+    <main id="hero">
+        <!-- Hero -->
+        <section class="hero wrap">
+            <div class="hero__topline">
+                <span class="mono">Portfolio — © 2026</span>
+                <span class="mono">Based in Jaipur, IN — <span id="clock">--:--</span></span>
             </div>
-            <h3 class="project-title">SkillForge</h3>
-            <p class="project-desc">
-              A comprehensive Full-Stack Web App that intelligently parses uploaded PDF resumes to analyze skills and provide incredibly constructive, AI-driven feedback.
+
+            <h1 class="hero__title" data-split="lines">
+                <span class="l1">Sushrut</span>
+                <span class="l2">Kane<em>.</em></span>
+            </h1>
+
+            <div class="hero__foot">
+                <div>
+                    <p class="hero__role">
+                        I design &amp; build <span class="rotator" id="rotator">intelligent systems</span><br />
+                        for the web.
+                    </p>
+                    <div class="hero__cta">
+                        <a href="#work" class="btn magnetic" data-cursor="explore"><span>Selected Work</span><span
+                                class="arw">↘</span></a>
+                        <a href="https://drive.google.com/file/d/1LAdF9yVdH7Bd3opZ8IN5lMvUbdnBN0Tb/view?usp=sharing"
+                            target="_blank" rel="noopener" class="btn btn--fill magnetic"
+                            data-cursor="open"><span>Résumé</span><span class="arw">↗</span></a>
+                    </div>
+                </div>
+                <div>
+                    <p class="hero__intro" data-reveal>
+                        Third-year Computer Science student at Manipal University Jaipur, working across
+                        full-stack development, machine learning and NLP. I like turning messy problems
+                        into software people actually enjoy using.
+                    </p>
+                    <p class="hero__badge" data-reveal style="margin-top:1.4rem">
+                        <span class="pulse"></span> Currently interning @ Philips — Bangalore
+                    </p>
+                </div>
+            </div>
+
+            <div class="scroll-cue" aria-hidden="true">
+                <span class="mono">Scroll</span>
+                <span class="bar"></span>
+            </div>
+        </section>
+
+        <!-- Marquee -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee__track" id="marquee">
+                <span class="marquee__item">Full-Stack Development</span>
+                <span class="marquee__item is-out">Machine Learning</span>
+                <span class="marquee__item">Natural Language Processing</span>
+                <span class="marquee__item is-out">Python</span>
+                <span class="marquee__item">React &amp; Node</span>
+                <span class="marquee__item is-out">Deep Learning</span>
+            </div>
+        </div>
+
+        <!-- About -->
+        <section class="section wrap" id="about">
+            <div class="section-head">
+                <h2 class="section-title" data-split="words">About</h2>
+                <span class="section-index mono mono--accent">( 01 )</span>
+            </div>
+
+            <p class="about__lead" data-split="words">
+                I turn <em>messy problems</em> into software that feels <span class="u">effortless</span> to use.
             </p>
-            <a href="https://github.com/Sushrut-Kane/SkillForge" target="_blank" class="btn btn-primary btn-sm">View Source <span>&#8594;</span></a>
-          </div>
-        </div>
 
-        <!-- Project 2 -->
-        <div class="project-row reverse fade-up">
-          <div class="project-image-container">
-            <img src="project_photo4.png" alt="Chat with PDF" class="project-img" onerror="this.src='https://via.placeholder.com/600x400/1e1e24/00d2ff?text=Chat+With+PDF'">
-          </div>
-          <div class="project-info glass-card">
-            <div class="project-tags">
-              <span class="tag">LLM</span>
-              <span class="tag">Streamlit</span>
+            <div class="about__grid">
+                <div class="about__col">
+                    <p data-reveal>
+                        My path runs through the intersection of <strong>engineering, curiosity and design</strong>.
+                        At Manipal University Jaipur I spend my time building intelligent systems — resume
+                        analyzers, document-chat tools, MERN apps — and shipping them so real people can use them.
+                    </p>
+                    <p data-reveal>
+                        Off the screen I'm a competitive <strong>table-tennis and hockey</strong> player. The habits
+                        those sports demand — reading the game fast, staying composed, adapting mid-rally — are the
+                        same ones I lean on while debugging at 2 a.m. I'm also an incurable <strong>traveller</strong>,
+                        and every new place tends to reset how I look at a problem.
+                    </p>
+                </div>
+
+                <div class="about__col">
+                    <ul class="facts">
+                        <li data-reveal><span class="k">Based in</span><span class="v">Jaipur, India</span></li>
+                        <li data-reveal><span class="k">Focus</span><span class="v">Full-stack · ML · NLP</span></li>
+                        <li data-reveal><span class="k">Education</span><span class="v">B.Tech CS — MUJ, Year 3</span>
+                        </li>
+                        <li data-reveal><span class="k">Currently</span><span class="v">Intern @ Philips,
+                                Bangalore</span></li>
+                        <li data-reveal><span class="k">Shipped</span><span class="v"><span class="num"
+                                    data-count="5">0</span> live projects &amp; counting</span></li>
+                        <li data-reveal><span class="k">Speaks</span><span class="v">English · Hindi · Marathi</span>
+                        </li>
+                    </ul>
+                    <p class="signature" data-reveal>— Sushrut</p>
+                </div>
             </div>
-            <h3 class="project-title">Chat-with-PDF</h3>
-            <p class="project-desc">
-              A powerful, lightweight Large Language Model application built to help users seamlessly chat with, query, and summarize any uploaded PDF document using advanced retrieval-augmented generation.
-            </p>
-            <div class="project-links">
-              <a href="https://sushrut-kane-chatwithpdf-ufyy7lxmyfzrqngbwbrfwu.streamlit.app/" target="_blank" class="btn btn-primary btn-sm">Live Demo <span>&#8594;</span></a>
-              <a href="https://github.com/Sushrut-Kane/Sushrut-Kane-Chat_with_PDF" target="_blank" class="btn btn-secondary btn-sm">GitHub</a>
+        </section>
+
+        <!-- Experience -->
+        <!-- Tip: fine-tune role titles, dates & descriptions to match your actual experience -->
+        <section class="section wrap" id="experience">
+            <div class="section-head">
+                <h2 class="section-title" data-split="words">Experience</h2>
+                <span class="section-index mono mono--accent">( 02 )</span>
             </div>
-          </div>
-        </div>
 
-        <!-- Project 3 -->
-        <div class="project-row fade-up">
-          <div class="project-image-container">
-            <img src="project_photo3.png" alt="ATS Resume Tracker" class="project-img" onerror="this.src='https://via.placeholder.com/600x400/1e1e24/00d2ff?text=ATS+Tracker'">
-          </div>
-          <div class="project-info glass-card">
-            <div class="project-tags">
-              <span class="tag">LLM</span>
-              <span class="tag">Prompt Engineering</span>
+            <ol class="xp">
+                <li class="xp__item" data-img="0" data-reveal>
+                    <div class="xp__period">
+                        <span class="mono">2026 — Present</span>
+                        <span class="xp__now"><span class="pulse"></span> Now</span>
+                    </div>
+                    <div class="xp__body">
+                        <h3 class="xp__role">Software Engineering Intern <span class="xp__at">— Philips</span></h3>
+                        <p class="xp__place mono">Bangalore, India</p>
+                        <p class="xp__desc">
+                            My current internship — contributing to software development at Philips, one of the
+                            world's largest health-technology companies, and shipping work that lands in real products.
+                        </p>
+                        <div class="xp__tags"><span>Software</span><span>Health-Tech</span></div>
+                    </div>
+                </li>
+
+                <li class="xp__item" data-img="1" data-reveal>
+                    <div class="xp__period">
+                        <span class="mono">Earlier</span>
+                    </div>
+                    <div class="xp__body">
+                        <h3 class="xp__role">Research Intern <span class="xp__at">— RRCAT</span></h3>
+                        <p class="xp__place mono">Raja Ramanna Centre for Advanced Technology · Indore, India</p>
+                        <p class="xp__desc">
+                            Interned at RRCAT, a research centre under India's Department of Atomic Energy — hands-on
+                            exposure to research-grade engineering and applied problem-solving in a national R&amp;D
+                            lab.
+                        </p>
+                        <div class="xp__tags"><span>Research</span><span>R&amp;D</span></div>
+                    </div>
+                </li>
+            </ol>
+
+            <!-- Floating hover preview. Drop philips-logo.png and rrcat-logo.png into this folder; -->
+            <!-- until then, the company name shows as a fallback. -->
+            <div class="xp-preview" id="xpPreview" aria-hidden="true">
+                <div class="xp-preview__slide">
+                    <img src="philips-logo.png" alt="Philips logo"
+                        onerror="this.closest('.xp-preview__slide').classList.add('no-img')" />
+                    <span class="fallback">Philips</span>
+                </div>
+                <div class="xp-preview__slide">
+                    <img src="rrcat-logo.png" alt="RRCAT logo"
+                        onerror="this.closest('.xp-preview__slide').classList.add('no-img')" />
+                    <span class="fallback">RRCAT</span>
+                </div>
             </div>
-            <h3 class="project-title">ATS Resume Tracker</h3>
-            <p class="project-desc">
-              An advanced Streamlit-based project that evaluates resumes against Applicant Tracking Systems standards, providing meaningful insights and demonstrating precise prompt engineering with LLMs.
-            </p>
-            <a href="https://atsresumetracker-d3khybmfx4pwrdpzc2645o.streamlit.app/" target="_blank" class="btn btn-primary btn-sm">Live Demo <span>&#8594;</span></a>
-          </div>
-        </div>
+        </section>
 
-        <!-- Project 4 -->
-        <div class="project-row reverse fade-up">
-          <div class="project-image-container">
-            <img src="agri-image.png" alt="Agri-Advisor" class="project-img" onerror="this.src='https://via.placeholder.com/600x400/1e1e24/00d2ff?text=Agri-Advisor'">
-          </div>
-          <div class="project-info glass-card">
-            <div class="project-tags">
-              <span class="tag">MERN</span>
-              <span class="tag">Web App</span>
+        <!-- Skills / capabilities -->
+        <section class="section wrap" id="skills">
+            <div class="section-head">
+                <h2 class="section-title" data-split="words">Capabilities</h2>
+                <span class="section-index mono mono--accent">( 03 )</span>
             </div>
-            <h3 class="project-title">Agri-Advisor</h3>
-            <p class="project-desc">
-              A Full Stack MERN application designed to empower farmers by answering queries regarding weather, optimal locations, and real-time market issues.
-            </p>
-            <a href="https://github.com/Sushrut-Kane/Agri" target="_blank" class="btn btn-primary btn-sm">View Source <span>&#8594;</span></a>
-          </div>
-        </div>
 
-        <!-- Project 5 -->
-        <div class="project-row fade-up">
-          <div class="project-image-container">
-            <img src="project_photo.png" alt="Recipe Finder" class="project-img" onerror="this.src='https://via.placeholder.com/600x400/1e1e24/00d2ff?text=Recipe+Finder'">
-          </div>
-          <div class="project-info glass-card">
-            <div class="project-tags">
-              <span class="tag">Frontend</span>
-              <span class="tag">API</span>
+            <div class="caps">
+                <article class="cap" data-reveal>
+                    <span class="cap__no">01</span>
+                    <div>
+                        <h3 class="cap__title">Machine Learning &amp; AI</h3>
+                        <div class="cap__tags">
+                            <span>TensorFlow</span><span>PyTorch</span><span>scikit-learn</span>
+                            <span>Pandas</span><span>NumPy</span><span>NLP</span><span>Prompt Engineering</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="cap" data-reveal>
+                    <span class="cap__no">02</span>
+                    <div>
+                        <h3 class="cap__title">Web Development</h3>
+                        <div class="cap__tags">
+                            <span>React</span><span>Node.js</span><span>Express</span>
+                            <span>REST APIs</span><span>Streamlit</span><span>HTML / CSS</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="cap" data-reveal>
+                    <span class="cap__no">03</span>
+                    <div>
+                        <h3 class="cap__title">Languages &amp; CS</h3>
+                        <div class="cap__tags">
+                            <span>Python</span><span>JavaScript</span><span>C</span>
+                            <span>MATLAB</span><span>Data Structures</span><span>Algorithms</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="cap" data-reveal>
+                    <span class="cap__no">04</span>
+                    <div>
+                        <h3 class="cap__title">Tools &amp; Workflow</h3>
+                        <div class="cap__tags">
+                            <span>Git</span><span>GitHub</span><span>Vercel</span>
+                            <span>Jupyter</span><span>VS Code</span><span>Linux</span>
+                        </div>
+                    </div>
+                </article>
             </div>
-            <h3 class="project-title">Recipe Finder</h3>
-            <p class="project-desc">
-              Discover delicious recipes based merely on the ingredients you currently have. A sleek, interactive frontend interface that makes deciding what to cook simple.
-            </p>
-            <a href="https://recipe-finder-eta-green.vercel.app/" target="_blank" class="btn btn-primary btn-sm">Live Demo <span>&#8594;</span></a>
-          </div>
+        </section>
+
+        <!-- Selected work -->
+        <section class="section work" id="work">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2 class="section-title" data-split="words">Selected Work</h2>
+                    <span class="section-index mono">( 04 )</span>
+                </div>
+
+                <ul class="work__list" id="workList">
+                    <li class="work__item" data-img="0">
+                        <a class="work__row" href="https://github.com/Sushrut-Kane/SkillForge" target="_blank"
+                            rel="noopener" data-cursor="view">
+                            <span class="work__no">01</span>
+                            <span class="work__name">SkillForge</span>
+                            <span class="work__tags"><span>AI</span><span>Full-Stack</span></span>
+                            <span class="work__go arw">↗</span>
+                        </a>
+                    </li>
+                    <li class="work__item" data-img="1">
+                        <a class="work__row"
+                            href="https://sushrut-kane-chatwithpdf-ufyy7lxmyfzrqngbwbrfwu.streamlit.app/"
+                            target="_blank" rel="noopener" data-cursor="view">
+                            <span class="work__no">02</span>
+                            <span class="work__name">Chat&nbsp;with&nbsp;PDF</span>
+                            <span class="work__tags"><span>LLM</span><span>RAG</span></span>
+                            <span class="work__go arw">↗</span>
+                        </a>
+                    </li>
+                    <li class="work__item" data-img="2">
+                        <a class="work__row" href="https://atsresumetracker-d3khybmfx4pwrdpzc2645o.streamlit.app/"
+                            target="_blank" rel="noopener" data-cursor="view">
+                            <span class="work__no">03</span>
+                            <span class="work__name">ATS Resume Tracker</span>
+                            <span class="work__tags"><span>LLM</span><span>Prompt Eng</span></span>
+                            <span class="work__go arw">↗</span>
+                        </a>
+                    </li>
+                    <li class="work__item" data-img="3">
+                        <a class="work__row" href="https://github.com/Sushrut-Kane/Agri" target="_blank" rel="noopener"
+                            data-cursor="view">
+                            <span class="work__no">04</span>
+                            <span class="work__name">Agri-Advisor</span>
+                            <span class="work__tags"><span>MERN</span><span>Full-Stack</span></span>
+                            <span class="work__go arw">↗</span>
+                        </a>
+                    </li>
+                    <li class="work__item" data-img="4">
+                        <a class="work__row" href="https://recipe-finder-eta-green.vercel.app/" target="_blank"
+                            rel="noopener" data-cursor="view">
+                            <span class="work__no">05</span>
+                            <span class="work__name">Recipe Finder</span>
+                            <span class="work__tags"><span>Frontend</span><span>API</span></span>
+                            <span class="work__go arw">↗</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Floating hover preview -->
+            <div class="work-preview" id="workPreview" aria-hidden="true">
+                <img class="work-preview__img" src="skillforge-image.png" alt="" />
+                <img class="work-preview__img" src="project_photo4.png" alt="" />
+                <img class="work-preview__img" src="project_photo3.png" alt="" />
+                <img class="work-preview__img" src="agri-image.png" alt="" />
+                <img class="work-preview__img" src="project_photo.png" alt="" />
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section contact" id="contact">
+            <div class="wrap contact__inner">
+                <div class="section-head" style="justify-content:center;border:none;margin-bottom:0;padding-bottom:0">
+                    <span class="mono mono--accent">( 05 ) — Let's connect</span>
+                </div>
+                <p class="mono" data-reveal style="margin-top:1rem">Have an idea, a role, or just want to say hi?</p>
+
+                <h2 class="contact__huge" data-split="words">
+                    <!-- Replace the email below with your real address -->
+                    <a href="mailto:hello@sushrutkane.dev" class="magnetic" data-cursor="email">Let's
+                        build<br /><em>something good.</em></a>
+                </h2>
+
+                <div class="contact__row">
+                    <a href="mailto:hello@sushrutkane.dev" class="btn btn--ghost-dark magnetic"
+                        data-cursor="email"><span>hello@sushrutkane.dev</span><span class="arw">↗</span></a>
+                    <div class="social">
+                        <a href="https://github.com/Sushrut-Kane" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://drive.google.com/file/d/1LAdF9yVdH7Bd3opZ8IN5lMvUbdnBN0Tb/view?usp=sharing"
+                            target="_blank" rel="noopener">Résumé</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="marquee" aria-hidden="true" style="border-top:none">
+            <div class="marquee__track" id="marqueeFoot">
+                <span class="marquee__item is-out">Sushrut Kane</span>
+                <span class="marquee__item">Let's work together</span>
+                <span class="marquee__item is-out">Sushrut Kane</span>
+                <span class="marquee__item">Available 2026</span>
+            </div>
         </div>
+        <div class="wrap footer__bar">
+            <span class="mono">© 2026 Sushrut Kane — Designed &amp; built by hand.</span>
+            <button class="to-top magnetic" id="toTop" data-cursor="top">Back to top <span class="arw">↑</span></button>
+        </div>
+    </footer>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section bg-alt">
-    <div class="section-container">
-      <h2 class="section-heading">Let's <span class="text-accent">Connect</span></h2>
-      <p class="contact-subtitle fade-up">Have a question or want to work together? Drop me a message.</p>
-      
-      <div class="contact-content fade-up">
-        <form class="contact-form glass-card">
-          <div class="form-group">
-            <input type="text" id="name" placeholder="Name" required />
-          </div>
-          <div class="form-group">
-            <input type="email" id="email" placeholder="Email" required />
-          </div>
-          <div class="form-group">
-            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full" onclick="event.preventDefault(); alert('Message feature coming soon!')">Send Message</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="nav-brand">
-        <span class="text-accent">S</span>K
-      </div>
-      <p class="copyright">© 2026 Sushrut Kane. Designed & Built with passion.</p>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // Register GSAP ScrollTrigger
-      gsap.registerPlugin(ScrollTrigger);
-
-      // Mobile Menu Toggle
-      const hamburger = document.querySelector('.hamburger');
-      const navLinksList = document.querySelector('.nav-links');
-      
-      hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navLinksList.classList.toggle('active');
-      });
-
-      // Smooth scrolling for navigation links
-      document.querySelectorAll('.nav-link, .btn[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href').substring(1);
-          const targetElement = document.getElementById(targetId);
-          
-          if (targetElement) {
-            // Close mobile menu if open
-            hamburger.classList.remove('active');
-            navLinksList.classList.remove('active');
-            
-            window.scrollTo({
-              top: targetElement.offsetTop - 70, // offset for fixed navbar
-              behavior: 'smooth'
-            });
-          }
-        });
-      });
-
-      // --- GSAP ANIMATIONS --- //
-      
-      // Navbar load
-      gsap.from(".navbar", { y: -100, opacity: 0, duration: 1, ease: "power3.out" });
-      
-      // Hero Elements load
-      const heroTl = gsap.timeline();
-      heroTl.from(".hero-title", { y: 50, opacity: 0, duration: 0.8, ease: "power3.out", delay: 0.2 })
-            .from(".hero-subtitle", { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6")
-            .from(".hero-description", { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6")
-            .from(".hero-buttons", { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6");
-      
-      // Background shape floating animation
-      gsap.to(".shape-1", {
-        y: "40px", x: "30px", rotation: 15, duration: 6, repeat: -1, yoyo: true, ease: "sine.inOut"
-      });
-      gsap.to(".shape-2", {
-        y: "-50px", x: "-40px", rotation: -15, duration: 7, repeat: -1, yoyo: true, ease: "sine.inOut", delay: 1
-      });
-      gsap.to(".shape-3", {
-        y: "30px", scale: 1.1, duration: 5, repeat: -1, yoyo: true, ease: "sine.inOut", delay: 2
-      });
-
-      // Fade up elements on scroll
-      const fadeElements = document.querySelectorAll('.fade-up');
-      fadeElements.forEach((el) => {
-        gsap.from(el, {
-          y: 60,
-          opacity: 0,
-          duration: 1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 85%", // Triggers when top of element hits 85% of viewport
-            toggleActions: "play none none reverse" // re-animates if scrolled back up
-          }
-        });
-      });
-
-      // Progress Bars Animation
-      const progressBars = document.querySelectorAll('.progress-bar');
-      progressBars.forEach((bar) => {
-        gsap.fromTo(bar, 
-          { width: "0%" }, 
-          {
-            width: bar.getAttribute('data-width'),
-            duration: 1.5,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: bar,
-              start: "top 90%",
-            }
-          }
-        );
-      });
-
-      // Parallax effect on project images
-      const projectImages = document.querySelectorAll('.project-img');
-      projectImages.forEach((img) => {
-        gsap.to(img, {
-          yPercent: 15,
-          ease: "none",
-          scrollTrigger: {
-            trigger: img.parentElement,
-            start: "top bottom", 
-            end: "bottom top",
-            scrub: true
-          }
-        });
-      });
-    });
-  </script>
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="script.js" defer></script>
 </body>
+
 </html>
