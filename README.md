@@ -4,7 +4,7 @@ A personal portfolio built around an editorial, warm-paper aesthetic — big
 typography, a single confident accent, and a lot of motion. No dark-glass
 templates here; every section is hand-composed.
 
-**Live:** https://sushrut-kane-portfolio.vercel.app/
+**Live:** portfolio-hazel-mu-19.vercel.app
 
 ---
 
